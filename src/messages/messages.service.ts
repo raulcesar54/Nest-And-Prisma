@@ -12,7 +12,7 @@ export class MessagesService {
             text: 'Segunda mensagem',
         }
     ];
-    public findAll = {
+    findAll() {
         return this.messages;
     }
 }

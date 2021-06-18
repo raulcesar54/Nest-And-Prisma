@@ -6,7 +6,7 @@ export class MessagesController {
     constructor(private messagesService: MessagesService) {}
 
     @Get()
-    findAll():MessagesService {
+    findAll() {
         return this.messagesService.findAll();
     }
 
