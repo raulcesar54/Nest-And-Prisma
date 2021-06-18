@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class MessagesService {
-    public messages = [
+    private messages = [
         {
             id: 1,
             text: 'Primeira mensagem',
@@ -12,4 +12,7 @@ export class MessagesService {
             text: 'Segunda mensagem',
         }
     ];
+    public findAll = {
+        return this.messages;
+    }
 }
