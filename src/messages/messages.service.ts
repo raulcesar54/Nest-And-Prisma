@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { message } from './message';
 
-
 @Injectable()
 export class MessagesService {
 
@@ -25,5 +24,11 @@ export class MessagesService {
   }
   create(message: message) {
     return this.messages.push(message);
+  }
+  update(id:number, message: message) {
+    const index = this.messages.findIndex((message) => message.id === id);
+    this.messages[index] = message
+
+    return message;
   }
 }
