@@ -24,10 +24,10 @@ export class MessagesController {
   }
   @Put(':id')
   update(@Param() params, @Body() message: messageType) {
-    return this.messagesService.update(Number(params.id), message);
+    return this.messagesService.update(Number(params.id), message)
   }
   @Delete(':id')
   delete(@Param() params) {
-    return this.messagesService.delete(Number(params.id));
+    return this.messagesService.delete(Number(params.id))
   }
 }
